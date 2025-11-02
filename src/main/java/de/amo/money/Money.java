@@ -15,9 +15,9 @@ public class Money {
 
     public static void main(String args[]) {
         if (args.length == 0) {
-            File testDir = new File("C:\\Users\\private\\IdeaProjects\\Money\\test\\run");
+            File testDir = new File("C:\\Users\\axelm\\softwareprojekte\\idea\\ManuelleTests\\run");
 
-            File testRessourceDir = new File("C:\\Users\\private\\IdeaProjects\\Money\\test\\");
+            File testRessourceDir = new File("C:\\Users\\axelm\\softwareprojekte\\idea\\ManuelleTests\\resources");
 
             String kontoDir = testDir.getAbsolutePath();
 
@@ -33,7 +33,7 @@ public class Money {
 
             FileHandler.copyDir(new File(testRessourceDir, "initial03"), testDir);
 
-            File database = new File("C:\\Users\\axelm\\softwareprojekte\\idea\\Money2025\\manuelleTests\\database.csv");
+            File database = new File(testRessourceDir, "database.csv");
             FileHandler.copyTo(database, new File(testDir, "database.csv"));
 
             Money.main2(new String[]{"moneyDir=" + kontoDir});
